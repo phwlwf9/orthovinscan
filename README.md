@@ -10,6 +10,7 @@
 - [Mã nguồn Flutter đóng gói](release/OrthoAI-Flutter-source.zip).
 - [Báo cáo build và giới hạn đã xác minh](release/BUILD_VERIFICATION.md).
 - [Checksum SHA-256](release/SHA256SUMS.txt).
+- [Trạng thái bàn giao và CI GitHub](docs/GITHUB_CI_STATUS.md).
 
 Không có IPA có chữ ký trong gói. Xem `docs/BUILD_IOS.md` để build/ký trên macOS bằng Xcode. Chưa kiểm thử trên điện thoại thật; đây là bản nghiên cứu/giáo dục cần chuyên gia rà soát.
 
