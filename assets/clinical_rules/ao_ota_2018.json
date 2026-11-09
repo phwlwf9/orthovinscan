@@ -1,0 +1,787 @@
+{
+  "classification_system": "AO/OTA",
+  "edition": "2018",
+  "version": "1.0.0-research",
+  "scope": "Adult coarse types only; no numeric groups or subgroups; no automated image diagnosis.",
+  "review_status": "pending_clinician_review",
+  "source_check_date": "2026-11-09",
+  "content_license_note": "Original brief summaries and factual code mappings only. AO diagrams, photos and source text are not redistributed. Not affiliated with or endorsed by AO Foundation or OTA. Clinical validation remains pending.",
+  "sources": [
+    {
+      "title": "AO/OTA Fracture and Dislocation Classification Compendium",
+      "organization": "AO Foundation / Orthopaedic Trauma Association",
+      "publication": "Journal of Orthopaedic Trauma 32, Supplement 1, January 2018",
+      "url": "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e",
+      "verified_pages": [
+        "S28: distal radius types",
+        "S33: proximal femur types",
+        "S49: proximal tibia types"
+      ]
+    },
+    {
+      "title": "Fracture Classifications, Core Curriculum V5",
+      "organization": "Orthopaedic Trauma Association",
+      "publication": "2021 online file; source does not state update date",
+      "url": "https://ota.org/sites/files/2021-06/General%20A1%20Fracture%20Classifications.pdf"
+    },
+    {
+      "title": "AO Surgery Reference: adult trauma region and treatment pages",
+      "organization": "AO Foundation",
+      "publication": "Online; update dates not consistently available",
+      "url": "https://surgeryreference.aofoundation.org/"
+    }
+  ],
+  "regions": [
+    {
+      "id": "distal_radius",
+      "name_vi": "Đầu dưới xương quay",
+      "name_en": "Distal radius",
+      "summary_vi": "AO/OTA 2018 · 2R3. Chỉ phân loại mức A/B/C ở người lớn; chưa phân nhóm số hoặc phân nhóm nhỏ. Cần bác sĩ kiểm tra phạm vi tổn thương và tổn thương xương trụ kèm theo.",
+      "summary_en": "AO/OTA 2018 · 2R3. Adult A/B/C types only; numeric groups and subgroups are not inferred. A clinician must verify injury extent and associated ulna injury.",
+      "reference_urls": [
+        "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm",
+        "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e",
+        "https://ota.org/sites/files/2021-06/General%20A1%20Fracture%20Classifications.pdf"
+      ],
+      "questions": [
+        {
+          "id": "adult",
+          "label_vi": "Bệnh nhân đã trưởng thành xương?",
+          "label_en": "Skeletally mature patient?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "views",
+          "label_vi": "Bác sĩ xác nhận đủ tư thế và chất lượng ảnh?",
+          "label_en": "Clinician confirms adequate views and image quality?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "joint",
+          "label_vi": "Đường gãy có vào mặt khớp?",
+          "label_en": "Does the fracture involve the joint surface?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "continuity",
+          "label_vi": "Còn một phần mặt khớp liên tục với thân xương?",
+          "label_en": "Does part of the joint surface remain connected to the shaft?",
+          "required": true,
+          "applies_when": {
+            "joint": "yes"
+          },
+          "options": [
+            {
+              "id": "connected",
+              "label_vi": "Còn một phần liên tục",
+              "label_en": "Part remains connected"
+            },
+            {
+              "id": "detached",
+              "label_vi": "Toàn bộ mặt khớp tách khỏi thân",
+              "label_en": "All articular surface detached"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "morphology",
+          "label_vi": "Mô tả hình thái (chỉ ghi nhận, chưa suy ra nhóm số)",
+          "label_en": "Morphology (record only; no numeric subgroup inference)",
+          "required": false,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "simple",
+              "label_vi": "Đơn giản",
+              "label_en": "Simple"
+            },
+            {
+              "id": "wedge",
+              "label_vi": "Mảnh chêm",
+              "label_en": "Wedge"
+            },
+            {
+              "id": "multifragmentary",
+              "label_vi": "Nhiều mảnh",
+              "label_en": "Multifragmentary"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "displacement",
+          "label_vi": "Có di lệch? (không xác định chỉ định mổ)",
+          "label_en": "Displacement present? (does not determine surgery)",
+          "required": false,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        }
+      ],
+      "types": [
+        {
+          "code": "2R3A",
+          "label_vi": "Gãy ngoài khớp",
+          "label_en": "Extra-articular fracture",
+          "criteria": {
+            "joint": "no"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "code": "2R3B",
+          "label_vi": "Gãy phạm khớp một phần",
+          "label_en": "Partial articular fracture",
+          "criteria": {
+            "joint": "yes",
+            "continuity": "connected"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "code": "2R3C",
+          "label_vi": "Gãy phạm khớp hoàn toàn",
+          "label_en": "Complete articular fracture",
+          "criteria": {
+            "joint": "yes",
+            "continuity": "detached"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        }
+      ],
+      "conflicts": [
+        {
+          "conditions": {
+            "joint": "no",
+            "continuity": "detached"
+          },
+          "message_vi": "Mâu thuẫn: ghi ngoài khớp nhưng toàn bộ mặt khớp tách khỏi thân xương. Kiểm tra lại ảnh và quan sát.",
+          "message_en": "Contradiction: extra-articular injury recorded with all articular surface detached from the shaft. Recheck images and observations."
+        }
+      ],
+      "treatment_sections": [
+        {
+          "title_vi": "Điều trị không mổ cần xem xét",
+          "title_en": "Nonoperative options to review",
+          "body_vi": "Bất động bằng bột là một lựa chọn cho gãy phù hợp. Bác sĩ cần đánh giá độ vững, trục và khả năng duy trì vị trí.",
+          "body_en": "Cast immobilization is an option for appropriate fractures. Review stability, alignment and maintenance of position.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm/extraarticular-undisplaced-fracture-of-the-radius/nonoperative-treatment-cast"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "title_vi": "Điều trị mổ cần xem xét",
+          "title_en": "Operative options to review",
+          "body_vi": "Các nhóm phương tiện gồm kim, nẹp vít và cố định ngoài tùy hình thái. Mã A/B/C riêng lẻ không đủ để chọn phương pháp.",
+          "body_en": "Fixation categories include wires, plates and external fixation depending on pattern. An A/B/C code alone cannot select treatment.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm/complete-simple-articular-simple-metaphyseal-radial-fracture/closed-reduction-k-wires-and-cast-external-fixator",
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm/complete-multifragmentary-fracture-of-the-radius/orif-palmar-bridge-plate"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "title_vi": "Kế hoạch và theo dõi",
+          "title_en": "Planning and follow-up",
+          "body_vi": "Đánh giá thần kinh giữa, khớp quay trụ dưới và phần mềm. Đường tiếp cận, nguy cơ gân, thần kinh và kế hoạch phục hồi cần xem trong tài liệu AO theo kiểu gãy cụ thể. Cần bác sĩ đánh giá thêm.",
+          "body_en": "Assess median nerve, distal radioulnar joint and soft tissues. Review pattern-specific AO material for approach, tendon and nerve risks and rehabilitation. Further clinician assessment is required.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/distal-forearm/complete-multifragmentary-fracture-of-the-radius/orif-palmar-bridge-plate"
+          ],
+          "review_status": "pending_clinician_review"
+        }
+      ]
+    },
+    {
+      "id": "proximal_femur",
+      "name_vi": "Đầu trên xương đùi",
+      "name_en": "Proximal femur",
+      "summary_vi": "AO/OTA 2018 · 31. Loại A: vùng mấu chuyển; B: cổ; C: chỏm. Không áp dụng quy tắc ngoài khớp/phạm khớp A/B/C của xương quay hoặc chày cho vùng này. Tổn thương kết hợp cần chuyên gia đánh giá.",
+      "summary_en": "AO/OTA 2018 · 31. A: trochanteric region; B: neck; C: head. Do not apply the radius/tibia articular A/B/C rule here. Combined injuries require specialist review.",
+      "reference_urls": [
+        "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-femur",
+        "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+      ],
+      "questions": [
+        {
+          "id": "adult",
+          "label_vi": "Bệnh nhân đã trưởng thành xương?",
+          "label_en": "Skeletally mature patient?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "views",
+          "label_vi": "Bác sĩ xác nhận đủ tư thế và chất lượng ảnh?",
+          "label_en": "Clinician confirms adequate views and image quality?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "site",
+          "label_vi": "Trung tâm đường gãy ở vùng nào?",
+          "label_en": "Where is the fracture centered?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "trochanter",
+              "label_vi": "Vùng mấu chuyển",
+              "label_en": "Trochanteric region"
+            },
+            {
+              "id": "neck",
+              "label_vi": "Cổ xương đùi",
+              "label_en": "Femoral neck"
+            },
+            {
+              "id": "head",
+              "label_vi": "Chỏm xương đùi",
+              "label_en": "Femoral head"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "combined",
+          "label_vi": "Có tổn thương kết hợp cổ/chỏm/ổ cối hoặc trật khớp?",
+          "label_en": "Combined neck/head/acetabular injury or dislocation?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "morphology",
+          "label_vi": "Mô tả hình thái (chỉ ghi nhận, chưa suy ra nhóm số)",
+          "label_en": "Morphology (record only; no numeric subgroup inference)",
+          "required": false,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "simple",
+              "label_vi": "Đơn giản",
+              "label_en": "Simple"
+            },
+            {
+              "id": "wedge",
+              "label_vi": "Mảnh chêm",
+              "label_en": "Wedge"
+            },
+            {
+              "id": "multifragmentary",
+              "label_vi": "Nhiều mảnh",
+              "label_en": "Multifragmentary"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "displacement",
+          "label_vi": "Có di lệch? (không xác định chỉ định mổ)",
+          "label_en": "Displacement present? (does not determine surgery)",
+          "required": false,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        }
+      ],
+      "types": [
+        {
+          "code": "31A",
+          "label_vi": "Gãy vùng mấu chuyển",
+          "label_en": "Trochanteric region fracture",
+          "criteria": {
+            "site": "trochanter"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-femur",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "code": "31B",
+          "label_vi": "Gãy cổ xương đùi",
+          "label_en": "Femoral neck fracture",
+          "criteria": {
+            "site": "neck"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-femur",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "code": "31C",
+          "label_vi": "Gãy chỏm xương đùi",
+          "label_en": "Femoral head fracture",
+          "criteria": {
+            "site": "head"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-femur",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        }
+      ],
+      "conflicts": [
+        {
+          "conditions": {
+            "combined": "yes"
+          },
+          "message_vi": "Tổn thương kết hợp vượt phạm vi bộ quy tắc một vị trí; chưa thể xác nhận một mã duy nhất.",
+          "message_en": "Combined injury exceeds this single-site rule set; one code cannot yet be confirmed."
+        }
+      ],
+      "treatment_sections": [
+        {
+          "title_vi": "Điều trị không mổ cần xem xét",
+          "title_en": "Nonoperative options to review",
+          "body_vi": "Chăm sóc không mổ cần được cá thể hóa khi không phù hợp phẫu thuật; cân nhắc đau, vận động và nguy cơ toàn thân. Không coi đây là lựa chọn mặc định.",
+          "body_en": "Nonoperative care requires individual assessment when surgery is unsuitable; consider pain, mobility and systemic risk. It is not a default pathway.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-femur/trochanteric-fracture-simple-pertrochanteric-two-part/nonoperative-treatment"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "title_vi": "Điều trị mổ cần xem xét",
+          "title_en": "Operative options to review",
+          "body_vi": "Tùy vị trí và kiểu gãy, tài liệu AO đề cập kết hợp xương hoặc thay khớp. Cần đánh giá hình thái, di lệch, chức năng trước chấn thương và bệnh đi kèm.",
+          "body_en": "Depending on location and pattern, AO describes fixation or arthroplasty. Review morphology, displacement, pre-injury function and comorbidity.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-femur/about"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "title_vi": "Kế hoạch và theo dõi",
+          "title_en": "Planning and follow-up",
+          "body_vi": "Chọn đường tiếp cận và phương tiện chỉ sau đánh giá đầy đủ. Cần xem nguy cơ phần mềm, mạch máu chỏm, biến chứng và phục hồi trong mục AO tương ứng. Cần bác sĩ đánh giá thêm.",
+          "body_en": "Select approach and implant after complete assessment. Review soft tissues, femoral head blood supply, complications and rehabilitation in the matching AO section. Further clinician assessment is required.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-femur/about"
+          ],
+          "review_status": "pending_clinician_review"
+        }
+      ]
+    },
+    {
+      "id": "proximal_tibia",
+      "name_vi": "Đầu trên xương chày",
+      "name_en": "Proximal tibia",
+      "summary_vi": "AO/OTA 2018 · 41. Chỉ phân loại mức A/B/C ở người lớn; chưa phân nhóm số hoặc đánh giá độ lún tự động. Cần đánh giá phần mềm và hình ảnh bổ sung khi chưa rõ tổn thương mặt khớp.",
+      "summary_en": "AO/OTA 2018 · 41. Adult A/B/C types only; numeric subgroups and automated depression assessment are not provided. Review soft tissues and further imaging when articular injury is unclear.",
+      "reference_urls": [
+        "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia",
+        "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e",
+        "https://ota.org/sites/files/2021-06/General%20A1%20Fracture%20Classifications.pdf"
+      ],
+      "questions": [
+        {
+          "id": "adult",
+          "label_vi": "Bệnh nhân đã trưởng thành xương?",
+          "label_en": "Skeletally mature patient?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "views",
+          "label_vi": "Bác sĩ xác nhận đủ tư thế và chất lượng ảnh?",
+          "label_en": "Clinician confirms adequate views and image quality?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "joint",
+          "label_vi": "Đường gãy có vào mặt khớp?",
+          "label_en": "Does the fracture involve the joint surface?",
+          "required": true,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "continuity",
+          "label_vi": "Còn một phần mặt khớp liên tục với thân xương?",
+          "label_en": "Does part of the joint surface remain connected to the shaft?",
+          "required": true,
+          "applies_when": {
+            "joint": "yes"
+          },
+          "options": [
+            {
+              "id": "connected",
+              "label_vi": "Còn một phần liên tục",
+              "label_en": "Part remains connected"
+            },
+            {
+              "id": "detached",
+              "label_vi": "Toàn bộ mặt khớp tách khỏi thân",
+              "label_en": "All articular surface detached"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "morphology",
+          "label_vi": "Mô tả hình thái (chỉ ghi nhận, chưa suy ra nhóm số)",
+          "label_en": "Morphology (record only; no numeric subgroup inference)",
+          "required": false,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "simple",
+              "label_vi": "Đơn giản",
+              "label_en": "Simple"
+            },
+            {
+              "id": "wedge",
+              "label_vi": "Mảnh chêm",
+              "label_en": "Wedge"
+            },
+            {
+              "id": "multifragmentary",
+              "label_vi": "Nhiều mảnh",
+              "label_en": "Multifragmentary"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        },
+        {
+          "id": "displacement",
+          "label_vi": "Có di lệch? (không xác định chỉ định mổ)",
+          "label_en": "Displacement present? (does not determine surgery)",
+          "required": false,
+          "applies_when": {},
+          "options": [
+            {
+              "id": "yes",
+              "label_vi": "Có",
+              "label_en": "Yes"
+            },
+            {
+              "id": "no",
+              "label_vi": "Không",
+              "label_en": "No"
+            },
+            {
+              "id": "unknown",
+              "label_vi": "Chưa rõ",
+              "label_en": "Unknown"
+            }
+          ]
+        }
+      ],
+      "types": [
+        {
+          "code": "41A",
+          "label_vi": "Gãy ngoài khớp",
+          "label_en": "Extra-articular fracture",
+          "criteria": {
+            "joint": "no"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "code": "41B",
+          "label_vi": "Gãy phạm khớp một phần",
+          "label_en": "Partial articular fracture",
+          "criteria": {
+            "joint": "yes",
+            "continuity": "connected"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "code": "41C",
+          "label_vi": "Gãy phạm khớp hoàn toàn",
+          "label_en": "Complete articular fracture",
+          "criteria": {
+            "joint": "yes",
+            "continuity": "detached"
+          },
+          "reference_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia",
+            "https://media.aofoundation.org/trauma/-/media/project/aocd/aotrauma/documents/classification/aoota_classification_2018_compendium.pdf?rev=8be490d5b65f44688bd11af197bbe55e"
+          ],
+          "review_status": "pending_clinician_review"
+        }
+      ],
+      "conflicts": [
+        {
+          "conditions": {
+            "joint": "no",
+            "continuity": "detached"
+          },
+          "message_vi": "Mâu thuẫn: ghi ngoài khớp nhưng toàn bộ mặt khớp tách khỏi thân xương. Kiểm tra lại ảnh và quan sát.",
+          "message_en": "Contradiction: extra-articular injury recorded with all articular surface detached from the shaft. Recheck images and observations."
+        }
+      ],
+      "treatment_sections": [
+        {
+          "title_vi": "Điều trị không mổ cần xem xét",
+          "title_en": "Nonoperative options to review",
+          "body_vi": "Điều trị bảo tồn chỉ được cân nhắc sau đánh giá độ vững, di lệch, phần mềm và khả năng theo dõi. Không suy ra chỉ định từ mã A/B/C.",
+          "body_en": "Consider nonoperative care only after reviewing stability, displacement, soft tissues and follow-up capacity. Do not infer indications from A/B/C alone.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia/lateral-plateau-split-fracture"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "title_vi": "Điều trị mổ cần xem xét",
+          "title_en": "Operative options to review",
+          "body_vi": "Các nhóm phương tiện gồm vít/nẹp hoặc cố định ngoài. Tổn thương năng lượng cao có thể cần điều trị theo giai đoạn theo tình trạng phần mềm.",
+          "body_en": "Fixation categories include screws/plates or external fixation. High-energy injuries may require staged treatment according to soft-tissue condition.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia/wedge-or-multifragmentary-extraarticular-fracture",
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia"
+          ],
+          "review_status": "pending_clinician_review"
+        },
+        {
+          "title_vi": "Kế hoạch và theo dõi",
+          "title_en": "Planning and follow-up",
+          "body_vi": "Kiểm tra mạch, thần kinh và nguy cơ chèn ép khoang. Hình thái mặt khớp, trục chi và phần mềm định hướng đánh giá tiếp. CT và tổn thương dây chằng/sụn chêm cần bác sĩ cân nhắc.",
+          "body_en": "Check vascular and neurological status and compartment syndrome risk. Review articular morphology, limb alignment and soft tissues. A clinician should consider CT and associated ligament/meniscal injury.",
+          "source_urls": [
+            "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/proximal-tibia"
+          ],
+          "review_status": "pending_clinician_review"
+        }
+      ]
+    }
+  ]
+}

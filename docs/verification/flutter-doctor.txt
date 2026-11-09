@@ -1,0 +1,70 @@
+[✓] Flutter (Channel stable, 3.47.9, on Debian GNU/Linux 13 (trixie) 6.18.57, locale C.UTF-8) [30ms]
+    • Flutter version 3.47.9 on channel stable at /workspace/work/tools/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision c197ca5199 (11 days ago), 2026-10-29 10:10:20 -0400
+    • Engine revision 89c39edfdf
+    • Dart version 3.13.7
+    • DevTools version 2.60.0
+    • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, enable-record-use, enable-swift-package-manager, omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 36.0.0) [129ms]
+    • Android SDK at /workspace/work/tools/android-sdk
+    • Emulator version unknown
+    • Platform android-36, build-tools 36.0.0
+    • ANDROID_HOME = /workspace/work/tools/android-sdk
+    • ANDROID_SDK_ROOT = /workspace/work/tools/android-sdk
+    • Java binary at: /usr/bin/java
+      This JDK was found in the system PATH.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 21.0.13+9-1-deb13u2-Debian)
+    • All Android licenses accepted.
+
+[✗] Chrome - develop for the web (Cannot find Chrome executable at google-chrome) [48ms]
+    ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+
+[✗] Linux toolchain - develop for Linux desktop [122ms]
+    ✗ clang++ is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install clang), or can be downloaded from https://releases.llvm.org/
+    ✗ CMake is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install cmake), or can be downloaded from https://cmake.org/download/
+    ✗ ninja is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install ninja-build), or can be downloaded from https://github.com/ninja-build/ninja/releases
+    • pkg-config version 1.8.1
+    ✗ GTK 3.0 development libraries are required for Linux development.
+      They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
+    ! Unable to access driver information using 'eglinfo'.
+      It is likely available from your distribution (e.g.: apt install mesa-utils)
+
+[✓] Proxy Configuration [64ms]
+    • HTTP_PROXY is set
+    • NO_PROXY is localhost,127.0.0.1,::1
+    • NO_PROXY contains localhost
+    • NO_PROXY contains 127.0.0.1
+    • NO_PROXY contains ::1
+
+[☠] Connected device (the doctor check crashed)
+    ✗ Due to an error, the doctor check did not complete. If the error message below is not helpful, please let us know about this issue at https://github.com/flutter/flutter/issues.
+    ✗ Error: Unable to run "adb", check your Android SDK installation and ANDROID_HOME environment variable: /workspace/work/tools/android-sdk/platform-tools/adb
+      Error details: Process exited abnormally with exit code -6:
+      11-09 16:52:08.432  5746  5746 F adb     : adb_utils.cpp:315 Cannot mkdir '/home/agent/.android': Read-only file system
+    • #0      throwToolExit (package:flutter_tools/src/base/common.dart:34:3)
+      #1      AndroidDevices.pollingGetDevices (package:flutter_tools/src/android/android_device_discovery.dart:77:7)
+      <asynchronous suspension>
+      #2      PollingDeviceDiscovery._populateDevices (package:flutter_tools/src/device.dart:558:36)
+      <asynchronous suspension>
+      #3      Future.wait.<anonymous closure> (dart:async/future.dart:567:21)
+      <asynchronous suspension>
+      #4      DeviceManager.refreshAllDevices (package:flutter_tools/src/device.dart:201:40)
+      <asynchronous suspension>
+      #5      DeviceValidator.validateImpl (package:flutter_tools/src/doctor.dart:781:34)
+      <asynchronous suspension>
+      #6      DoctorValidator.validate (package:flutter_tools/src/doctor_validator.dart:58:37)
+      <asynchronous suspension>
+      #7      Future.any.onValue (dart:async/future.dart:658:5)
+      <asynchronous suspension>
+
+
+[✓] Network resources [515ms]
+    • All expected network resources are available.
+
+! Doctor found issues in 3 categories.

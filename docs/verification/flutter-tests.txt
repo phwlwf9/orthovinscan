@@ -1,0 +1,43 @@
+00:00 +0: loading /workspace/work/orthoai/test/imaging_test.dart
+00:00 +0: /workspace/work/orthoai/test/imaging_test.dart: JPEG/PNG import creates a real metadata-free display copy
+00:00 +1: /workspace/work/orthoai/test/imaging_test.dart: JPEG EXIF rotation is applied and identifiers are removed
+00:00 +2: /workspace/work/orthoai/test/imaging_test.dart: empty, corrupt, unsupported, and disguised files fail explicitly
+00:00 +3: /workspace/work/orthoai/test/imaging_test.dart: DICOM explicit and implicit little endian produce expected pixels
+00:00 +4: /workspace/work/orthoai/test/imaging_test.dart: DICOM signed stored bits and shifted high bit are respected
+00:00 +5: /workspace/work/orthoai/test/imaging_test.dart: MONOCHROME1 is inverted and window/level acts on original intensity
+00:00 +6: /workspace/work/orthoai/test/imaging_test.dart: compatible DICOM presentation shape is honored without double inversion
+00:00 +7: /workspace/work/orthoai/test/imaging_test.dart: DICOM orientation labels and unvalidated calibration are separate
+00:00 +8: /workspace/work/orthoai/test/imaging_test.dart: unsupported DICOM compression, frames, dimensions, and truncation fail closed
+00:00 +9: /workspace/work/orthoai/test/imaging_test.dart: future preprocessing is deterministic and preserves letterbox transform
+00:00 +10: /workspace/work/orthoai/test/imaging_test.dart: unavailable inference never fabricates candidate diagnoses
+00:00 +11: loading /workspace/work/orthoai/test/measurements_test.dart
+00:00 +11: /workspace/work/orthoai/test/measurements_test.dart: distance uses image pixels rather than screen scale
+00:00 +12: /workspace/work/orthoai/test/measurements_test.dart: angle handles perpendicular, straight and degenerate arms
+00:00 +13: /workspace/work/orthoai/test/measurements_test.dart: millimeters require valid explicit calibration
+00:00 +14: loading /workspace/work/orthoai/test/app_workflow_test.dart
+00:01 +14: /workspace/work/orthoai/test/app_workflow_test.dart: image, annotation, clinical assessment, classification, references and PDF workflow
+00:08 +15: loading /workspace/work/orthoai/test/storage_report_test.dart
+00:09 +15: /workspace/work/orthoai/test/storage_report_test.dart: Authenticated local case storage round trip keeps images and findings but never stores plaintext
+00:09 +16: /workspace/work/orthoai/test/storage_report_test.dart: Authenticated local case storage wrong key and tampering fail without destroying original data
+00:09 +17: /workspace/work/orthoai/test/storage_report_test.dart: Authenticated local case storage case identifiers cannot escape app storage
+00:09 +18: /workspace/work/orthoai/test/storage_report_test.dart: Authenticated local case storage history retains lightweight summaries and preserves unreadable cases
+00:09 +19: /workspace/work/orthoai/test/storage_report_test.dart: unknown clinical findings are not normal and red flags are explicit
+00:09 +20: /workspace/work/orthoai/test/storage_report_test.dart: offline Vietnamese PDF handles missing data and annotated image
+00:09 +21: loading /workspace/work/orthoai/test/classification_test.dart
+00:10 +21: /workspace/work/orthoai/test/classification_test.dart: (setUpAll)
+00:10 +21: /workspace/work/orthoai/test/classification_test.dart: documents the fixed edition, scope and review status
+00:10 +22: /workspace/work/orthoai/test/classification_test.dart: unknown observations preserve candidates without confirmation
+00:10 +23: /workspace/work/orthoai/test/classification_test.dart: distal radius narrows extraarticular type, with exclusions explained
+00:10 +24: /workspace/work/orthoai/test/classification_test.dart: articular injury without continuity information is insufficient
+00:10 +25: /workspace/work/orthoai/test/classification_test.dart: known and unknown are never treated as equivalent
+00:10 +26: /workspace/work/orthoai/test/classification_test.dart: contradictory observations prevent confirmation even with one match
+00:10 +27: /workspace/work/orthoai/test/classification_test.dart: inadequate views and paediatric cases cannot be confirmed
+00:10 +28: /workspace/work/orthoai/test/classification_test.dart: proximal femur uses anatomical site, not the generic articular rule
+00:10 +29: /workspace/work/orthoai/test/classification_test.dart: combined femoral injuries are escalated beyond the one-site engine
+00:10 +30: /workspace/work/orthoai/test/classification_test.dart: invalid answer IDs and unsupported regions fail closed
+00:10 +31: /workspace/work/orthoai/test/classification_test.dart: deterministic results do not depend on observation insertion order
+00:10 +32: /workspace/work/orthoai/test/classification_test.dart: (tearDownAll)
+00:10 +32: loading /workspace/work/orthoai/test/viewer_test.dart
+00:10 +32: /workspace/work/orthoai/test/viewer_test.dart: DICOM spacing requires explicit clinician confirmation
+00:11 +33: /workspace/work/orthoai/test/viewer_test.dart: rotation preserves normalized measurements and exports real PNGs
+00:12 +34: All tests passed!

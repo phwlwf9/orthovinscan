@@ -1,0 +1,35 @@
+name: Android development APK
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: '3.47.9'
+          cache: true
+      - name: Doctor
+        run: flutter doctor -v
+      - name: Analyze, test and build universal development APK
+        run: bash scripts/build_android.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OrthoAI-Android-development
+          path: |
+            release/OrthoAI-Android.apk
+            release/OrthoAI-Android.apk.sha256
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,30 @@
+name: iOS unsigned compilation
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ios:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: '3.47.9'
+          cache: true
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          flutter doctor -v
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+      - name: Validate native iOS compilation without signing
+        run: flutter build ios --release --no-codesign
+      # Distribution is intentionally a separate, explicitly initiated process.
+      # See docs/BUILD_IOS.md for required certificates, profiles and export settings.
+      # An unsigned .app is not an installable iPhone IPA and is not uploaded as one.
